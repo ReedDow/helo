@@ -1,0 +1,77 @@
+.auth-background{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #FF70A6, #FF9770, #FFD670, #E9FF70);
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+
+
+}
+
+.auth-container{
+    height:50vh;
+    width:40vw;
+    background-image: linear-gradient(to right, #FF70A6, #FF9770, #FFD670);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 6px 10px 2px #403D39;
+    border-radius: 8px
+}
+h1{
+    position: relative;
+    top: 50px;
+    font-size: 75px;
+}
+.inptunm{
+    height: 20px;
+    position: relative;
+    left: 40px;
+    bottom: 38px;
+    border: none;
+}
+.inptpw{
+    height: 20px;
+    position: relative;
+    left: 100px;
+    bottom: 78px;
+    border: none;
+}
+.unm{
+    height: 20px;
+    position: relative;
+    right: 100px;
+    
+}
+.pw{
+    height: 20px;
+    bottom: 37px;
+    position: relative;
+    right: 100px;
+}
+
+.btn1{
+    
+    position: relative;
+    bottom: 20px;
+    right: 85px;
+    height: 30px;
+    width: 50px;
+    color: white;
+    background-color: #403D39;
+    border: none;
+}
+.btn2{
+    position: relative;
+    bottom: 20px;
+    right: 50px;
+    height: 30px;
+    width: 70px;
+    color: white;
+    background-color: #403D39;
+    border: none;
+
+}
+
