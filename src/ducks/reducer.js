@@ -4,7 +4,7 @@ const initialState ={
     userId:''
 }
 
-const GET_USER = 'GET_USERNAME';
+const GET_USER = 'GET_USER';
 const GET_PROFILE_PICTURE = 'GET_PROFILE_PICTURE';
 const GET_ID = 'GET'
 
@@ -19,7 +19,8 @@ export default function reducer(state=initialState, action){
     const {type, payload} = action;
     switch(type){
         case GET_USER:
-            return{...state, username: payload}
+            return{...state, user: payload}
+            
         default: return state
 
     }

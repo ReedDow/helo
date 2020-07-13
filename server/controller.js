@@ -34,5 +34,9 @@ module.exports = {
         delete foundUser[0].password;
         req.session.user = foundUser[0];
         res.status(202).send(req.session.user);
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        req.sendStatus(200)
     }
 }

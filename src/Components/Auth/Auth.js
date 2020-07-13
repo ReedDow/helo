@@ -21,6 +21,7 @@ handleRegister = () => {
     const{username, password} = this.state;
     axios.post('/auth/register', {username, password})
     .then(res => {
+        
         this.props.getUser(res.data);
         this.props.history.push('./dashboard');
     })
@@ -31,6 +32,7 @@ handleLogin = ()=> {
     const {username, password} = this.state;
     axios.post('/auth/login', {username, password})
     .then(res => {
+
         this.props.getUser(res.data);
         this.props.history.push('./dashboard')
     })
@@ -39,7 +41,7 @@ handleLogin = ()=> {
 
     render(){
         return(
-            <div className = 'auth-background'>
+            <body>
             <div className = 'auth-container'>
                 <section className = 'auth-info'>
                     <h1>Helo</h1>
@@ -59,7 +61,7 @@ handleLogin = ()=> {
                     <button className = 'btn2' onClick = {this.handleRegister}>Register</button>
                 </section>
             </div>
-            </div>
+            </body>
         )
     }
 }

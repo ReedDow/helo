@@ -8,8 +8,10 @@ create table helo_users(
 
 create table if not exists post (
     post_id serial primary key,
-    user_id int references helo_user(user_id),
-    post_url text
+    title serial,
+    content text,
+    post_url text,
+    user_id int references helo_user(user_id)
 );
 
 alter table helo_users alter column password type text;

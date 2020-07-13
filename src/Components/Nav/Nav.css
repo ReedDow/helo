@@ -10,7 +10,14 @@
     padding: 0px 30px;
 }
 
-
+.img{
+    position: relative;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    bottom: 200px;
+    right: 50px;
+}
 
 .nav-links1{
     position: relative;

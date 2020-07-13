@@ -1,0 +1,71 @@
+div{
+    background-color: #F2F2F2;
+    height: 100vh;
+    width: 100vw;
+    right: 0px;
+    display: flex;
+    
+    
+}
+
+.searchcontainer{
+    display: flex;
+    right: 150px;
+    top: 50px;
+    position: absolute;
+    height: 50px;
+    width: 700px;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 1px 1px 0px #403D39;
+    border-radius: 2px;
+}
+
+.searchinput{
+    color: black;
+    position: relative;
+    top: 100;
+    left: 20px;
+    width: 450px;
+}
+
+.srchbtn{
+    position: relative;
+    color: white;
+    background-color: #FF9770;
+    border: none;
+    left: 20px;
+    height: 20px;
+}
+.resetbtn{
+    position: relative;
+    background-color: #403D39;
+    color: white;
+    left: 20px;
+    height: 20px;
+    border: none;
+}
+
+
+.checkbox{
+    position: relative;
+    left: 115px;
+}
+
+span{
+    position: relative;
+    left: 30px;
+}
+
+.dashboard{
+    position: absolute;
+    top: 120px;
+    right: 150px;
+    background-color: white;
+    height: 400px;
+    width: 700px;
+    align-items: center;
+    box-shadow: 0px 1px 1px 0px #403D39;
+
+}
