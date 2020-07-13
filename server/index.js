@@ -28,13 +28,14 @@ massive({
     console.log('db connected');
 })
 
-app.post('/auth/register', ctrl.register)
-app.post('/auth/login', ctrl.login)
-app.post('/auth/logout', ctrl.logout)
+app.post('/auth/register', ctrl.register);
+app.post('/auth/login', ctrl.login);
+app.post('/auth/logout', ctrl.logout);
 
-app.get('/api/post/:postid', mainctrl.createPost)
-app.get('/api/posts/:userid', mainctrl.getUserPosts)
-app.post('/api/post/:userid', mainctrl.deletePost)
+app.post('/api/post/:userid', mainctrl.createPost);
+app.get('/api/post/:postid', mainctrl.deletePost);
+app.get('/api/posts/:userid', mainctrl.getUserPosts);
+
 
 
 app.listen(port, () => console.log(`listening on port ${port}`))

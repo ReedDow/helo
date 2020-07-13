@@ -14,15 +14,9 @@ class Dashboard extends Component{
         }
     }
 
-    
-
-    
-
-    deletePost = (id) => {
-        axios.delete(`/api/post/${id}`)
-        .then(() => {
-            this.getUserPosts();
-        })
+    getUserPosts = () => {
+        axios.get(`api/posts/${this.props.user.user_id}`)
+        .then(res => this.setState({posts: res.data}))
         .catch(err => console.log(err));
     }
 
@@ -33,7 +27,13 @@ class Dashboard extends Component{
         this.setState({userposts: event.target.checked})
 
     render(){
-        
+        // console.log(this.props)
+        const mappedPosts = this.state.posts.map((post, i) => (
+            <div className='allposts'>
+                <img key={i} src={post.post_url} alt='posts' className='post-image'/>
+                <button onClick={() => this.deletePost(post.post_id)}>Delete</button>
+            </div>
+        ))
         return(
             
             <div>
@@ -52,11 +52,13 @@ class Dashboard extends Component{
                         checked = {this.state.checked}
                         onChange = {this.handleCheckboxChange}/>
                 <span>My Posts</span>
-                
                 </section>
+
                 <section className = 'dashboard'>
-
-
+                <h6>Recent Posts</h6>
+                <div className='post-flex'>
+                    {mappedPosts}
+                </div>
                 </section>
             </div>
         )

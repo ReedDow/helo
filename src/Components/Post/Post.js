@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './Post.css';
+import {connect} from 'react-redux';
 
 class Post extends Component{
     constructor(props){
@@ -14,9 +15,13 @@ class Post extends Component{
         }
     }
 
-    getUserPosts = () => {
-        axios.get(`api/posts/${this.props.user.user_id}`)
-        .then(res => this.setState({posts: res.data}))
+    
+
+    deletePost = (id) => {
+        axios.delete(`/api/post/${id}`)
+        .then(() => {
+            this.getUserPosts();
+        })
         .catch(err => console.log(err));
     }
 
@@ -24,8 +29,11 @@ class Post extends Component{
         return(
             <div className = 'postcontainer'>
 
+
             </div>
         )
     }
 }
-export default Post;
+const mapStateToProps = reduxState => reduxState;
+
+export default connect(mapStateToProps)(Post)

@@ -67,5 +67,18 @@ span{
     width: 700px;
     align-items: center;
     box-shadow: 0px 1px 1px 0px #403D39;
+}
+.allposts{
+    position: relative;
+    top: 100px;
+    right: 100px;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+}
 
+.post-flex{
+    background-color: white;
+    height: 400px;
+    width: 700px;
 }

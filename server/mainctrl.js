@@ -1,10 +1,10 @@
 
 module.exports ={
 createPost: (req, res) => {
-    const {id, postImage} = req.body,
+    const {id, postImage, postTitle, postContent} = req.body,
           db = req.app.get('db');
     
-    db.post.create_post(id, postImage)
+    db.post.create_post(id, postImage, postTitle, postContent)
     .then(() => res.sendStatus(200))
     .catch(err => res.status(500).send(err));
 },
@@ -23,14 +23,6 @@ deletePost: (req, res) => {
     db.post.delete_post(id)
     .then(() => res.sendStatus(200))
     .catch(err => res.status(500).send(err));
-},
-updateUsername: (req, res) => {
-    const {id} = req.params,
-          {username} = req.body
-          db = req.app.get('db');
-    
-    db.users.update_username(username, id)
-    .then(user => res.status(200).send(user))
-    .catch(err => console.log(err));
 }
+
 }

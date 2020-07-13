@@ -8,7 +8,7 @@ create table helo_users(
 
 create table if not exists post (
     post_id serial primary key,
-    title serial,
+    title text,
     content text,
     post_url text,
     user_id int references helo_user(user_id)

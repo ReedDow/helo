@@ -1,4 +1,10 @@
 .postcontainer{
+    position: absolute;
     background-color: white;
-    
+    width: 50vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center
+
+
 }

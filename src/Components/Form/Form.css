@@ -1,0 +1,52 @@
+.newpost{
+    position: absolute;
+    top: 80px;
+    right: 75px;
+    background-color: white;
+    height: 600px;
+    width: 850px;
+    justify-content: center;
+    box-shadow: 0px 1px 1px 0px #403D39;
+    font-size: 40px;
+    color: #FF9770
+}
+.input1{
+    position: absolute;
+    width: 700px;
+    top: 70px;
+
+}
+
+.imgpreview{
+    position: absolute;
+    background-color: gray;
+    width: 400px;
+    height: 220px;
+    top: 100px;
+}
+
+.input2{
+    position: absolute;
+    width: 700px;
+    bottom: 245px;
+
+}
+.input3{
+    position: absolute;
+    width: 700px;
+    height: 180px;
+    bottom: 50px;
+
+}
+
+.postbtn{
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    bottom: 10px;
+    right: 70px;
+    background-color: #403D39;
+    color: white;
+    border: none;
+}
+
